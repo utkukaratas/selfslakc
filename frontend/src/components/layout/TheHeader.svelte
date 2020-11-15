@@ -1,17 +1,26 @@
 <script>
+  import Dropdown from '../controls/Dropdown.svelte'
 	import Avatar from '../controls/Avatar.svelte'
 </script>
 
-<div>
+<header>
   logo
 
   <input type="text" placeholder="xxx search input" />
 
-  <Avatar />
-</div>
+  <Dropdown>
+    <Avatar />
+    <div slot="content">
+      <ul>
+        <li>settings</li>
+        <li>sign out</li>
+      </ul>
+    </div>
+  </Dropdown>
+</header>
 
 <style>
-  div {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
