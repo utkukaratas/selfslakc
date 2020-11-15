@@ -16,5 +16,4 @@
 		border-right: 1px solid rgb(82, 38, 83);
     color: rgb(207, 195, 207);
   }
-
 </style>

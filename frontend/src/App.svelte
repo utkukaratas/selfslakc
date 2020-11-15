@@ -1,10 +1,10 @@
 <script>
 	import { channels, directMessages } from "./stores.js";
 
+	import RouteContainer from './components/layout/RouteContainer.svelte'
 	import TheHeader from "./components/layout/TheHeader.svelte";
 	import TheWorkspaceSelector from "./components/layout/TheWorkspaceSelector.svelte";
 	import TheWorkspaceNavigator from "./components/layout/TheWorkspaceNavigator.svelte";
-	import TheWorkspaceMain from "./components/layout/TheWorkspaceMain.svelte";
 
 	channels.set([
 		{ title: "xxx" },
@@ -23,7 +23,10 @@
 	<TheHeader />
 	<TheWorkspaceSelector />
 	<TheWorkspaceNavigator />
-	<TheWorkspaceMain />
+
+	<div class="routeContainerWrapper">
+		<RouteContainer />
+	</div>
 </main>
 
 <style>
@@ -39,5 +42,10 @@
 		grid-template-areas: "header-area header-area header-area" "workspace-selector-area workspace-navigator-area .";
 
 		background-color: #fbfbfb;
+	}
+	.routeContainerWrapper {
+		border: 1px solid red;
+  	padding: 1em;
+	  overflow: scroll;
 	}
 </style>

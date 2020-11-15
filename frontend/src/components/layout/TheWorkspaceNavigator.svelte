@@ -1,9 +1,10 @@
 <script>
 	import { channels, directMessages } from "../../stores.js";
+	import { route } from '../../routes.js'
 </script>
 
 <div>
-	<p>quicklinks</p>
+	<!-- <p>quicklinks</p>
 	<ul>
 		<li>
 			<a href="#"> Mentions &amp; reactions</a>
@@ -11,13 +12,13 @@
 		<li>
 			<a href="#"> more...</a>
 		</li>
-	</ul>
+	</ul> -->
 
 	<p>channels</p>
 	<ul>
 		{#each $channels as channel (channel.title)}
 		<li>
-			<a href="#"> {channel.title} </a>
+			<a href="#" on:click="{() => route.set({path: 'Channel'})}"> {channel.title} </a>
 		</li>
 		{/each}
   </ul>
@@ -26,7 +27,7 @@
 	<ul>
 		{#each $directMessages as dm (dm.title)}
 		<li>
-			<a href="#"> {dm.title} </a>
+			<a href="#" on:click="{() => route.set({path: 'DirectMessage'})}"> {dm.title} </a>
 		</li>
 		{/each}
   </ul>
