@@ -4,7 +4,7 @@
 	export let message = null
 </script>
 
-<div>
+<div class="channel-message" on:mouseenter>
   <Avatar />
   <article>
     <header>
@@ -17,12 +17,13 @@
 </div>
 
 <style>
-div {
+.channel-message {
   border: 1px solid red;
   display: flex;
+  position: relative;
   padding: 8px 0;
 }
-div:hover {
+.channel-message:hover {
   background: #F8F8F8;
 }
 </style>
