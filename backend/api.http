@@ -1,0 +1,8 @@
+###
+GET http://localhost:4999/
+
+###
+GET http://localhost:4999/api/discovery
+
+###
+GET http://localhost:4999/api/conversation?conversationId=123
