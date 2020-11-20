@@ -45,7 +45,6 @@
 	}
 	.routeContainerWrapper {
 		border: 1px solid red;
-  	padding: 1em;
-	  overflow: scroll;
+	  overflow: hidden;
 	}
 </style>
